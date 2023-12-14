@@ -1,30 +1,40 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!DOCTYPE html>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--
-    Seu Google client ID
-    Esse client ID foi criado no passo anterior
-  -->
-  <meta name="google-signin-client_id" content="102871282361-pcqs2n4osvc7ab2a07d4i6nho4i43n2g.apps.googleusercontent.com">
-
-  <title>Google authentication - Exemplo 1</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Autenticação do Google e Relatório do Power BI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <style>
+    /* Estilos personalizados aqui */
+    /* Pode adicionar estilos adicionais conforme necessário */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Estilos para o botão de login */
+    .box-login {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
   <div class="container body-content">
     <div class="box-login">
       <h2>Login</h2>
-
-      <!-- html do botão -->
+      
+      <!-- HTML do botão Google Sign-in -->
       <div id="meu-botao"></div>
-
+      
       <hr/>
       <a href="javascript:void(0);" onclick="signOut();">Sign out</a>
+    </div>
+    <hr />
+    <div class="embed-responsive embed-responsive-16by9">
+      <!-- Incorporação do iframe do Power BI -->
+      <iframe class="embed-responsive-item" src="https://app.powerbi.com/view?r=eyJrIjoiNDdlZjNiMjMtNTRjMC00NjAzLWFmN2QtNDhiNjZmYzY1NWVkIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" allowfullscreen></iframe>
     </div>
     <hr />
     <footer>
@@ -32,12 +42,18 @@
     </footer>
   </div>
 
-  <script src="scripts/example1.js"></script>
+  <!-- Seu script para a autenticação do Google -->
+  <script>
+    function signOut() {
+      // Lógica para o sign out (se existir)
+    }
+<meta name="google-signin-client_id" content="783017677176-jl5qbms08409ts13boc6i7i8bodr44gt.apps.googleusercontent.com">
+  </script>
 
-  <!--Google Platform Library-->
+  <!-- Google Platform Library -->
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
-  <!--JQuery e Bootstrap - Não são obrigatórios para ao autenticação -->
+  <!-- JQuery e Bootstrap (opcional para autenticação) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
