@@ -2,23 +2,80 @@
 <html>
 <head>
     <title>Página de Acesso</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #senhaForm {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f5f5f5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #painelRelatorios {
+            width: 100%;
+            height: 100vh;
+            display: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <div id="senhaForm">
         <h1>Insira a senha:</h1>
         <input type="password" id="senha" placeholder="Senha">
+        <br><br>
         <button onclick="verificarSenha()">Entrar</button>
     </div>
     
-    <div id="painelRelatorios" style="display: none;">
-        <h1>Bem-vindo ao Painel de Relatórios</h1>
-        <iframe title="painel_sellers" width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <div id="painelRelatorios">
+        <iframe title="painel_sellers" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
     </div>
 
     <script>
         function verificarSenha() {
             var senhaInserida = document.getElementById("senha").value;
-            var senhaCorreta = "Madeteste123@"; // Senha correta
+            var senhaCorreta = "123"; // Senha correta
 
             if (senhaInserida === senhaCorreta) {
                 document.getElementById("senhaForm").style.display = "none";
