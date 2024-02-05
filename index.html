@@ -62,7 +62,7 @@
 </head>
 <body>
     <div id="senhaForm">
-        <h1>Insira a senha:</h1>
+        <h1>Qual a senha?:</h1>
         <input type="password" id="senha" placeholder="Senha">
         <br><br>
         <button onclick="verificarSenha()">Entrar</button>
@@ -75,7 +75,7 @@
     <script>
         function verificarSenha() {
             var senhaInserida = document.getElementById("senha").value;
-            var senhaCorreta = "123"; // Senha correta
+            var senhaCorreta = "123_mad_123"; // Senha correta
 
             if (senhaInserida === senhaCorreta) {
                 document.getElementById("senhaForm").style.display = "none";
