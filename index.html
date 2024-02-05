@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Página de Senha</title>
+    <title>Página de Acesso</title>
 </head>
 <body>
-    <h1>Insira a senha:</h1>
-    <form id="senhaForm">
+    <div id="senhaForm">
+        <h1>Insira a senha:</h1>
         <input type="password" id="senha" placeholder="Senha">
-        <button type="button" onclick="verificarSenha()">Enviar</button>
-    </form>
-
-    <p id="mensagemErro" style="color: red;"></p>
+        <button onclick="verificarSenha()">Entrar</button>
+    </div>
+    
+    <div id="painelRelatorios" style="display: none;">
+        <h1>Bem-vindo ao Painel de Relatórios</h1>
+        <iframe title="painel_sellers" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=130aeb88-6b9b-4feb-a0da-66fe5bac0374&autoAuth=true&ctid=f23232334-4c10-84ea-68089b72edd5" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
 
     <script>
         function verificarSenha() {
@@ -18,9 +21,10 @@
             var senhaCorreta = "123"; // Senha correta
 
             if (senhaInserida === senhaCorreta) {
-                window.location.href = "Pagina2.html"; // Redireciona para a Página 2
+                document.getElementById("senhaForm").style.display = "none";
+                document.getElementById("painelRelatorios").style.display = "block";
             } else {
-                document.getElementById("mensagemErro").innerHTML = "Senha incorreta!";
+                alert("Senha incorreta!");
             }
         }
     </script>
