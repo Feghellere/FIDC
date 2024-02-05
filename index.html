@@ -9,28 +9,32 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-color: #f0f0f0; /* Cor de fundo */
         }
 
         #senhaForm {
             text-align: center;
             border: 1px solid #ccc;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #f5f5f5;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff; /* Cor de fundo do formulário */
+            max-width: 400px;
+            width: 100%;
         }
 
         h1 {
             font-size: 24px;
+            color: #007bff; /* Cor do título */
         }
 
         input[type="password"] {
             padding: 10px;
             font-size: 16px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
         button {
@@ -62,7 +66,7 @@
 </head>
 <body>
     <div id="senhaForm">
-        <h1>QUAL A SENHA?</h1>
+        <h1>Insira a senha:</h1>
         <input type="password" id="senha" placeholder="Senha">
         <br><br>
         <button onclick="verificarSenha()">ENTRAR</button>
@@ -71,8 +75,6 @@
     <div id="painelRelatorios">
         <iframe title="painel_sellers" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
     </div>
-
-    <script>
         function verificarSenha() {
             var senhaInserida = document.getElementById("senha").value;
             var senhaCorreta = "123_mad_123"; // Senha correta
