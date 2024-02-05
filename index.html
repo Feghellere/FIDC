@@ -54,7 +54,7 @@
 </head>
 <body>
     <div id="senhaForm">
-        <h1>Insira a senha:</h1>
+        <h1>QUAL A SENHA?</h1>
         <input type="password" id="senha" placeholder="Senha">
         <br><br>
         <button onclick="verificarSenha()">ENTRAR</button>
@@ -69,7 +69,7 @@
 
             if (senhaInserida === senhaCorreta) {
                 document.getElementById("senhaForm").style.display = "none";
-                document.getElementById("painelRelatorios").src = "https://app.powerbi.com/view?r=eyJrIjoiZTRlkMTMzZjg4ZWNmIiwidCI6ImY3YzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9";
+                document.getElementById("painelRelatorios").src = "https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9";
                 document.getElementById("painelRelatorios").style.display = "block";
             } else {
                 alert("Senha incorreta!");
