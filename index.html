@@ -50,18 +50,6 @@
         button:hover {
             background-color: #0056b3;
         }
-
-        #painelRelatorios {
-            width: 100%;
-            height: calc(100vh - 80px); /* Ajusta a altura para deixar espaço para o formulário */
-            display: none;
-        }
-
-        iframe {
-            width: 800px; /* Largura do iframe ajustada para 800 pixels */
-            height: 600px; /* Altura do iframe ajustada para 600 pixels */
-            border: none;
-        }
     </style>
 </head>
 <body>
@@ -72,9 +60,7 @@
         <button onclick="verificarSenha()">ENTRAR</button>
     </div>
     
-    <div id="painelRelatorios">
-        <iframe title="painel_sellers" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
-    </div>
+    <iframe title="painel_sellers" width="800" height="836" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
 
     <script>
         function verificarSenha() {
@@ -83,7 +69,7 @@
 
             if (senhaInserida === senhaCorreta) {
                 document.getElementById("senhaForm").style.display = "none";
-                document.getElementById("painelRelatorios").style.display = "block";
+                // Você pode mostrar o iframe aqui, se desejar.
             } else {
                 alert("Senha incorreta!");
             }
