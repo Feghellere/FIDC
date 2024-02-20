@@ -3,48 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecionamento de Botões</title>
+<title>Exemplo de Iframes</title>
 <style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    
-    .button-container {
+    .iframe-container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .button {
-        padding: 10px 20px;
-        border: none;
-        background-color: #FFA500; /* Cor laranja */
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .button:hover {
-        background-color: #FF8C00; /* Cor laranja mais escura ao passar o mouse */
+    .full-screen {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: white;
     }
 </style>
 </head>
 <body>
 
-<div class="button-container">
-    <button class="button" onclick="window.location.href = 'https://www.google.com.br';">Painel FIDC</button>
-    <button class="button" onclick="window.location.href = 'https://www.google.com.br';">Painel Seller's</button>
-    <button class="button" onclick="window.location.href = 'https://www.google.com.br';">Painel Looker</button>
+<div class="iframe-container">
+    <iframe title="painel_sellers" width="1000" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true" class="iframe"></iframe>
+    <iframe title="painel_sellers" width="1000" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true" class="iframe"></iframe>
+    <iframe title="painel_sellers" width="1000" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true" class="iframe"></iframe>
 </div>
+
+<script>
+    const iframes = document.querySelectorAll('.iframe');
+
+    iframes.forEach(iframe => {
+        iframe.addEventListener('click', () => {
+            iframe.classList.toggle('full-screen');
+        });
+    });
+</script>
 
 </body>
 </html>
