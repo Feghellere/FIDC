@@ -58,10 +58,9 @@
         <input type="password" id="senha" placeholder="Senha">
         <br><br>
         <button onclick="verificarSenha()">ENTRAR</button>
+        <button id="botaoSecreto" style="display: none;" onclick="acaoBotao()">Botão Secreto</button>
     </div>
-    
-    <iframe id="painelRelatorios" title="painel_sellers" <iframe title="painel_sellers" width="1140" height="541.25" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true" style="display: none;"></iframe>
-
+  
     <script>
         function verificarSenha() {
             var senhaInserida = document.getElementById("senha").value;
@@ -69,10 +68,15 @@
 
             if (senhaInserida === senhaCorreta) {
                 document.getElementById("senhaForm").style.display = "none";
-                document.getElementById("painelRelatorios").style.display = "none";
+                document.getElementById("botaoSecreto").style.display = "block";
             } else {
                 alert("Senha incorreta!");
             }
+        }
+
+        function acaoBotao() {
+            alert("Você descobriu o botão secreto!");
+            // Adicione aqui a ação que deseja executar ao clicar no botão secreto
         }
     </script>
 </body>
