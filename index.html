@@ -10,15 +10,34 @@
         flex-direction: column;
         align-items: center;
     }
+    .full-screen {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: white;
+    }
 </style>
 </head>
 <body>
 
 <div class="iframe-container">
-    <iframe title="painel_sellers" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00343MzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
-    <iframe title="painel_sellers" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni0056564ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
-    <iframe title="painel_sellers" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZj656565iwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe title="painel_sellers" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true" class="iframe"></iframe>
+    <iframe title="painel_sellers" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true" class="iframe"></iframe>
+    <iframe title="painel_sellers" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTRiZDI2MjItOWM1Ni00NTA5LThhYTQtYTlkMTMzZjg4ZWNmIiwidCI6ImYzYzA4ZjEwLThkMzQtNGMxMC04NGVhLTY4MDg5YjcyZWRkNSJ9" frameborder="0" allowFullScreen="true" class="iframe"></iframe>
 </div>
+
+<script>
+    const iframes = document.querySelectorAll('.iframe');
+
+    iframes.forEach(iframe => {
+        iframe.addEventListener('click', () => {
+            iframe.classList.toggle('full-screen');
+        });
+    });
+</script>
 
 </body>
 </html>
