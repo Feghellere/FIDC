@@ -15,6 +15,23 @@
         <div id="labelResultado">CÓDIGO COMPLETO: XXXX-Y</div>
     </div>
 
+    <!-- Modal -->
+    <div id="modalLogica" class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <h2>Lógica do Dígito de Controle</h2>
+        <p>A lógica para calcular o dígito de controle é baseada no método 'Módulo 11':</p>
+        <ul>
+          <li>Multiplica-se cada dígito do número por pesos crescentes de 2 a 6, da direita para a esquerda.</li>
+          <li>Somam-se os resultados dessas multiplicações.</li>
+          <li>O total é então dividido por 11 e o resto da divisão é calculado.</li>
+          <li>O dígito de controle é determinado por 11 menos o resto da divisão.</li>
+          <li>Se o resultado for 10 ou 11, o dígito de controle se torna 0.</li>
+        </ul>
+        <p>----- RA's: 1002252639, 1002050015, 1002253219, 1002250535, 1002251186 -----</p>
+      </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
