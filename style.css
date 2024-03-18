@@ -1,55 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F4F7F6;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
 }
 
 .container {
-    width: 400px; /* Ajustado para acomodar melhor o título */
-    padding: 20px; /* Espaçamento interno para não colar nas bordas */
-    background-color: white; /* Fundo branco para destacar o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    width: 400px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaçamento entre elementos */
-    border-radius: 8px; /* Bordas arredondadas */
+    gap: 15px;
 }
 
 h2 {
     text-align: center;
-    color: #333; /* Cor escura para o título para melhor contraste */
-    margin-bottom: 20px; /* Espaçamento extra abaixo do título */
+    color: #333;
+    margin-bottom: 20px;
 }
 
 #campoCodigo {
     padding: 10px;
     text-align: center;
-    border: 1px solid #ccc; /* Borda sutil */
-    border-radius: 5px; /* Bordas arredondadas para a caixa de texto */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline-color: #007BFF;
 }
 
 button {
     padding: 10px;
     cursor: pointer;
-    background-color: #007bff; /* Cor azul padrão para botões */
-    color: white; /* Texto branco para contraste */
-    border: none; /* Remover borda padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+    background-color: #007BFF; /* Cor azul vibrante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efeito ao passar o mouse */
 }
 
 #labelResultado {
     text-align: center;
-    font-size: 16pt; /* Tamanho maior para o resultado */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #f8f9fa; /* Fundo sutilmente diferente */
-    border: 1px solid #eee; /* Borda muito sutil */
-    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14pt;
+    padding: 10px;
+    background-color: #FBFBFB; /* Fundo sutil */
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
 }
