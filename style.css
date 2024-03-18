@@ -8,24 +8,48 @@ body {
 }
 
 .container {
-    width: 300px;
+    width: 400px; /* Ajustado para acomodar melhor o título */
+    padding: 20px; /* Espaçamento interno para não colar nas bordas */
+    background-color: white; /* Fundo branco para destacar o formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px; /* Espaçamento entre elementos */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Cor escura para o título para melhor contraste */
+    margin-bottom: 20px; /* Espaçamento extra abaixo do título */
 }
 
 #campoCodigo {
     padding: 10px;
     text-align: center;
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 5px; /* Bordas arredondadas para a caixa de texto */
 }
 
 button {
     padding: 10px;
     cursor: pointer;
+    background-color: #007bff; /* Cor azul padrão para botões */
+    color: white; /* Texto branco para contraste */
+    border: none; /* Remover borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
 }
 
 #labelResultado {
     text-align: center;
-    font-size: 12pt;
-    margin-top: 10px;
+    font-size: 16pt; /* Tamanho maior para o resultado */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #f8f9fa; /* Fundo sutilmente diferente */
+    border: 1px solid #eee; /* Borda muito sutil */
+    border-radius: 5px; /* Bordas arredondadas */
 }
