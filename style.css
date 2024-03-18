@@ -31,13 +31,13 @@ h2 {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    outline-color: #007BFF;
+    outline-color: #FF9114;
 }
 
 button {
     padding: 10px;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #FF9114;
     color: white;
     border: none;
     border-radius: 5px;
