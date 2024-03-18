@@ -1,50 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecionamento de Botões</title>
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    
-    .button-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button {
-        padding: 10px 20px;
-        border: none;
-        background-color: #FFA500; /* Cor laranja */
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .button:hover {
-        background-color: #FF8C00; /* Cor laranja mais escura ao passar o mouse */
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificação de materiais</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <input type="text" id="campoCodigo" placeholder="INSIRA O CÓDIGO DO ITEM" />
+        <button id="botaoCalcular">CALCULAR DÍGITO DE CONTROLE</button>
+        <button id="botaoLogica">LÓGICA DO DÍGITO DE CONTROLE</button>
+        <div id="labelResultado">CÓDIGO COMPLETO: XXXX-Y</div>
+    </div>
 
-<div class="button-container">
-    <button class="button" onclick="window.location.href = 'https://www.google.com.br';">Painel FIDC</button>
-    <button class="button" onclick="window.location.href = 'https://www.google.com.br';">Painel Seller's</button>
-    <button class="button" onclick="window.location.href = 'https://www.google.com.br';">Painel Looker</button>
-</div>
-
+    <script src="script.js"></script>
 </body>
 </html>
