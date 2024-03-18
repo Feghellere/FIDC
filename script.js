@@ -28,5 +28,6 @@ document.getElementById('botaoLogica').addEventListener('click', function() {
         + "2. Somam-se os resultados dessas multiplicações.\n"
         + "3. O total é então dividido por 11 e o resto da divisão é calculado.\n"
         + "4. O dígito de controle é determinado por 11 menos o resto da divisão.\n"
-        + "5. Se o resultado for 10 ou 11, o dígito de controle se torna 0.");
+        + "5. Se o resultado for 10 ou 11, o dígito de controle se torna 0.\n"
+        + "----- RA's: 1002252639, 1002050015, 1002253219, 1002250535, 1002251186 ----- ");
 });
