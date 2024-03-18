@@ -22,12 +22,21 @@ document.getElementById('botaoCalcular').addEventListener('click', function() {
     }
 });
 
-document.getElementById('botaoLogica').addEventListener('click', function() {
-    alert("A lógica para calcular o dígito de controle é baseada no método 'Módulo 11'.\n"
-        + "1. Multiplica-se cada dígito do número por pesos crescentes de 2 a 6, da direita para a esquerda.\n"
-        + "2. Somam-se os resultados dessas multiplicações.\n"
-        + "3. O total é então dividido por 11 e o resto da divisão é calculado.\n"
-        + "4. O dígito de controle é determinado por 11 menos o resto da divisão.\n"
-        + "5. Se o resultado for 10 ou 11, o dígito de controle se torna 0.\n"
-        + "----- RA's: 1002252639, 1002050015, 1002253219, 1002250535, 1002251186 ----- ");
-});
+// Modal logic
+var modal = document.getElementById("modalLogica");
+var btn = document.getElementById("botaoLogica");
+var span = document.getElementsByClassName("close-button")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
