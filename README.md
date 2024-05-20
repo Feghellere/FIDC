@@ -1,6 +1,3 @@
-# Fluxograma do Processo de Criação de Vídeos
-
-```mermaid
 graph TD;
     A[Início] --> B[Carregar arquivo de registro de combinações]
     B --> C{O arquivo de registro existe?}
